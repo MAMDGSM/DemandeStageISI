@@ -1,0 +1,149 @@
+\documentclass{article}
+\usepackage[left=20mm,right=20mm,top=10mm,bottom=15mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[scaled=.89]{helvet}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{pslatex}
+\usepackage{fancybox}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{marvosym}
+
+\setcounter{secnumdepth}{0}
+
+\hypersetup{pdfborder={1 1 1}}
+\def\LayoutTextField#1#2{\makebox[10em][l]{#1:}\raisebox{-.5ex}{#2}}
+\def\LayoutChoiceField#1#2{\makebox[12em][l]{#1:}#2}
+\renewcommand{\MakeTextField}[2]{{\vbox to #2{\vfill\hbox to #1{\hrulefill}}}}
+\newdimen\longline
+\longline=\textwidth\advance\longline-12em
+
+\begin{document}
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\baselinestretch}{1}
+\lhead{}
+\rhead{}
+\cfoot{\small \bf 2 Rue Abou Raihane Bayrouni, 2080 l'Ariana \hspace{5mm} \Telefon ~ 71 706 164 \hspace{5mm} \FAX ~ 71 706 698 \hspace{5mm} \Email~ISI@isim.rnu.tn}
+
+\begin{center}
+\begin{minipage}[c]{58mm}
+\begin{center}
+\includegraphics[width=44mm]{LogoISI}
+\end{center}
+\end{minipage}
+\begin{minipage}[c]{58mm}
+\begin{center}
+\includegraphics[width=44mm]{Tn2}
+\end{center}
+\end{minipage}
+\begin{minipage}[c]{58mm}
+\begin{center}
+\textcolor{blue}{
+	\footnotesize{
+			\textbf{ 
+			\textsc{République Tunisienne\\
+			Ministère de l'Enseignement Supérieur\\
+			et de la Recherche Scientifique\\
+			Université de Tunis El Manar\\
+			Institut Supérieur d'Informatique\\
+			}
+		}
+	}
+}
+\end{center}
+\end{minipage}
+\end{center}
+
+\vspace*{7mm}
+
+\begin{center}
+ \huge{Proposition de Stage}
+ \end{center}
+
+\vspace*{7mm}
+
+\section{Partie réservée à l'étudiant}
+\vspace{5mm}
+\begin{center}
+\boxput*(0 ,1){\colorbox{white}{\textbf{Important}}}{\setlength{\fboxsep}{6pt}\fbox{
+\begin{minipage}[c]{164mm}
+\hspace*{2mm}
+\begin{center}
+L'étudiant ci-dessous indiqué (\textcolor[rgb]{0.55,0,0}{conformément à sa carte d'étudiant}) est appelé à demander auprès des entreprises, établissements industriels et économiques un stage conforme à ses études.
+\end{center}
+\end{minipage}}}
+\end{center}
+%value=
+\begin{center}
+\TextField[name=num_cin,width=\longline,maxlen=8,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Numéro CIN}\vskip1ex
+\TextField[name=nom,width=\longline,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Nom}\vskip1ex
+\TextField[name=prenom,width=\longline,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Prénom}\vskip1ex
+\TextField[name=etudes,width=72mm,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Niveau d'étude}
+\hspace{5mm}
+\TextField[name=au,width=20mm,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Année Universitaire}\vskip1ex
+\TextField[name=spetial,width=\longline,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Spécialité}\vskip1ex
+\vspace{5mm}
+\TextField[name=adresse,width=\longline,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Adresse d'été}\vskip1ex
+\TextField[name=ville,width=50mm,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Ville}
+\hspace{5mm}
+\TextField[name=gouvernorat,width=42mm,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Gouvernorat}\vskip1ex
+\TextField[name=cp,width=50mm,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Code Postal}
+\hspace{5mm}
+\TextField[name=tel,width=42mm,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Tel./Mobile}\vskip1ex
+\end{center}
+
+\section{Partie réservée à l'entreprise}
+
+\begin{center}
+\TextField[name=nomete,width=\longline,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Nom de l'entreprise}\vskip1ex
+\TextField[name=domain,width=\longline,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Domaines d'activité}\vskip1ex
+\TextField[name=adresssieg,width=\longline,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Adresse du siège social}\vskip1ex
+\TextField[name=ville,width=50mm,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Ville}
+\hspace{5mm}
+\TextField[name=gouvernorat,width=42mm,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Gouvernorat}\vskip1ex
+\TextField[name=cp,width=\longline,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Code Postal}\vskip1ex
+\TextField[name=tel,width=50mm,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Tel./Mobile}
+\hspace{5mm}
+\TextField[name=fax,width=42mm,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Fax}\vskip1ex
+\TextField[name=serv,width=\longline,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Service bénéficiaire}\vskip1ex
+\end{center}
+
+\section{Partie réservée au détails du stage}
+
+
+\begin{center}
+\TextField[name=suj,width=\longline,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Sujet de stage}\vskip1ex
+\TextField[name=perso,width=\longline,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Personne contactée}\vskip1ex
+\TextField[name=respo,width=\longline,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Responsable/Encadreur}\vskip1ex
+\TextField[name=fct,width=\longline,borderwidth=1,bordercolor={0 0 0},backgroundcolor={1 1 1}]{Fonction}\vskip1ex 
+\end{center}
+
+ \vspace*{3mm}
+
+\begin{center}
+\begin{minipage}[c]{150mm}
+\begin{minipage}[c]{40mm}
+\begin{center}
+ Signature du responsable\\
+ \vspace*{3mm}
+\dotfill
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{40mm}
+\begin{center}
+ Cachet de l'entreprise\\
+ \vspace*{3mm}
+.
+\end{center}
+\end{minipage}
+\end{minipage}
+\end{center}
+\end{document}
